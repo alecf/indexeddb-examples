@@ -150,7 +150,7 @@ GraphDB.prototype.groupby = function(properties, template) {
     };
 
     var graphDB = this;
-    var transaction = this.transaction('links');
+    var transaction = this.db.transaction('links');
     var query = graphDB.getIndexAndKey(fakeTemplate, transaction);
     var result = {};
     console.log("groupby opening cursor");
